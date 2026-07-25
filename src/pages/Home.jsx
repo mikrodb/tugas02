@@ -1,8 +1,47 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import Footer from "./Footer";
+import Footer from "../pages/Footer";
+import MovieCard from "../components/Home/MovieCard";
 
 export default function Home() {
+  const movies = [
+    {
+      id: 1,
+      title: "Chronos",
+      rating: 8.5,
+      image: "https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
+      year: 2024,
+    },
+    {
+      id: 2,
+      title: "The Matrix",
+      rating: 8.5,
+      image: "https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
+      year: 2024,
+    },
+    {
+      id: 3,
+      title: "Chronos",
+      rating: 8.5,
+      image: "https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
+      year: 2024,
+    },
+    {
+      id: 4,
+      title: "Chronos",
+      rating: 8.5,
+      image: "https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
+      year: 2024,
+    },
+    {
+      id: 5,
+      title: "Chronos",
+      rating: 8.5,
+      image: "https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
+      year: 2024,
+    },
+  ];
+
   return (
     <>
       <Navbar />
@@ -13,7 +52,7 @@ export default function Home() {
           <h2 className="font-bebas text-white text-3xl">Trending</h2>
         </div>
         <div className="cards mt-7 flex gap-5 overflow-x-hidden">
-          <div className="card min-w-[200px] flex flex-col gap-y-2">
+          {/* <div className="card min-w-[200px] flex flex-col gap-y-2">
             <div className="image w-full h-[300px]">
               <img
                 className="object-cover h-full w-full rounded-lg"
@@ -37,7 +76,17 @@ export default function Home() {
                 <span className="font-inter text-xs text-gray-500">2024</span>
               </div>
             </div>
-          </div>
+          </div> */}
+          {movies.map((movie) => (
+            <MovieCard
+              key={movie.id}
+              id={movie.id}
+              title={movie.title}
+              rating={movie.rating}
+              image={movie.image}
+              year={movie.year}
+            />
+          ))}
         </div>
       </div>
 

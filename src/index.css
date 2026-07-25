@@ -5,3 +5,9 @@
   --font-bebas: "Bebas Neue", sans-serif; 
   --font-inter: "Inter", sans-serif; 
 }
+
+body{
+    background-color: #14181C;
+    min-height: 100vh;
+    
+}

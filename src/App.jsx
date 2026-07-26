@@ -3,16 +3,18 @@
 // import viteLogo from "./assets/vite.svg";
 // import heroImg from "./assets/hero.png";
 // import "./App.css";
-// import Navbar from "./components/Navbar";
-// import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 import Home from "./pages/Home";
+import Browse from "./pages/Browse";
 
 function App() {
   return (
     <>
       {/* <Navbar />
       <Hero /> */}
-      <Home />
+      {/* <Home /> */}
+      <Browse />
     </>
   );
 }

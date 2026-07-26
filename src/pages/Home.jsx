@@ -40,15 +40,30 @@ export default function Home() {
       image: "https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
       year: 2024,
     },
+    {
+      id: 6,
+      title: "Chronos",
+      rating: 8.5,
+      image: "https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
+      year: 2024,
+    },
+    {
+      id: 7,
+      title: "Chronos",
+      rating: 8.5,
+      image: "https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
+      year: 2024,
+    },
   ];
 
   return (
     <>
       <Navbar />
       <Hero />
-
+      {/* Trending   */}
       <div className="trending max-w-7xl mx-auto mt-[47px]">
-        <div className="heading">
+        <div className="heading flex items-center gap-x-3">
+          <div className="w-1 h-6 bg-amber-600"></div>
           <h2 className="font-bebas text-white text-3xl">Trending</h2>
         </div>
         <div className="cards mt-7 flex gap-5 overflow-x-hidden">
@@ -77,6 +92,26 @@ export default function Home() {
               </div>
             </div>
           </div> */}
+          {movies.map((movie) => (
+            <MovieCard
+              key={movie.id}
+              id={movie.id}
+              title={movie.title}
+              rating={movie.rating}
+              image={movie.image}
+              year={movie.year}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Recommended   */}
+      <div className="trending max-w-7xl mx-auto mt-[47px]">
+        <div className="heading flex items-center gap-x-3">
+          <div className="w-1 h-6 bg-amber-600"></div>
+          <h2 className="font-bebas text-white text-3xl">Recommended</h2>
+        </div>
+        <div className="cards mt-7 flex gap-5 overflow-x-hidden">
           {movies.map((movie) => (
             <MovieCard
               key={movie.id}

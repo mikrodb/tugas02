@@ -50,7 +50,7 @@ function Navbar() {
 
           {/* <!-- Profile --> */}
           <div className="profile flex w-[36px] h-[36px]  bg-[#FF8000] items-center justify-center rounded-full">
-            A
+            SS
           </div>
         </div>
       </div>

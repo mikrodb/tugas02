@@ -7,15 +7,14 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Home from "./pages/Home";
 import Browse from "./pages/Browse";
+import { Route, Routes } from "react-router";
 
 function App() {
   return (
-    <>
-      {/* <Navbar />
-      <Hero /> */}
-      {/* <Home /> */}
-      <Browse />
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/browse" element={<Browse />} />
+    </Routes>
   );
 }
 

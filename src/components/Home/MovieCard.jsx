@@ -28,7 +28,7 @@
 //   );
 // }
 
-function MovieCard({ id, title, rating, image, year, genres, fav }) {
+function MovieCard({ id, title, rating, image, year, genres, fav = false }) {
   // title dalam card
   const [baris1, baris2] = title.toUpperCase().split(" ");
 
@@ -38,7 +38,9 @@ function MovieCard({ id, title, rating, image, year, genres, fav }) {
       <div className="relative image w-full h-[300px]">
         <img
           className="object-cover h-full w-full rounded-lg"
-          src={image}
+          src={
+            image || `https://dummyimage.com/200x300/333/ffffff&text=${title}`
+          }
           alt={title}
         />
         {/* // ini untuk genre */}

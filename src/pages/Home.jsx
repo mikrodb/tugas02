@@ -7,52 +7,116 @@ export default function Home() {
   const movies = [
     {
       id: 1,
-      title: "Chronos",
-      rating: 8.5,
+      title: "Chronos Letterbound",
+      rating: 8.7,
       image: "https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
       year: 2024,
+      genres: ["SCI-FI"],
+      fav: true,
     },
     {
       id: 2,
-      title: "The Matrix",
-      rating: 8.5,
+      title: "Chronos Echo",
+      rating: 7.4,
       image: "https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
-      year: 2024,
+      year: 2019,
+      genres: ["THRILLER"],
+      fav: false,
     },
     {
       id: 3,
-      title: "Chronos",
-      rating: 8.5,
+      title: "Chronos Hours",
+      rating: 6.8,
       image: "https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
-      year: 2024,
+      year: 2021,
+      genres: ["DRAMA"],
+      fav: false,
     },
     {
       id: 4,
-      title: "Chronos",
-      rating: 8.5,
+      title: "Chronos Bay",
+      rating: 7.9,
       image: "https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
-      year: 2024,
+      year: 2020,
+      genres: ["MISTERY"],
+      fav: true,
     },
     {
       id: 5,
-      title: "Chronos",
-      rating: 8.5,
+      title: "Chronos Garden",
+      rating: 8.0,
       image: "https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
-      year: 2024,
+      year: 2023,
+      genres: ["ROMANCE"],
+      fav: false,
     },
     {
       id: 6,
-      title: "Chronos",
-      rating: 8.5,
+      title: "Chronos Engine",
+      rating: 6.5,
       image: "https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
-      year: 2024,
+      year: 2022,
+      genres: ["ACTION"],
+      fav: false,
     },
     {
       id: 7,
-      title: "Chronos",
-      rating: 8.5,
+      title: "Chronos Sunrise",
+      rating: 8.2,
+      image: "https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
+      year: 2018,
+      genres: ["DRAMA"],
+      fav: true,
+    },
+
+    {
+      id: 8,
+      title: "Chronos & Co",
+      rating: 7.1,
       image: "https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
       year: 2024,
+      genres: ["COMEDY"],
+      fav: false,
+    },
+
+    {
+      id: 9,
+      title: "Chronos Forever",
+      rating: 9.0,
+      image: "https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
+      year: 2017,
+      genres: ["DRAMA"],
+      fav: false,
+    },
+
+    {
+      id: 10,
+      title: "Chronos Effect",
+      rating: 8.5,
+      image: "https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
+      year: 2015,
+      genres: ["SCI-FI"],
+      fav: true,
+    },
+
+    {
+      id: 11,
+      title: "Chronos Theory",
+      rating: 7.7,
+      image: "https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
+      year: 2019,
+      genres: ["DRAMA"],
+      fav: false,
+    },
+
+    {
+      id: 12,
+      title: "Chronos Storm",
+      rating: 6.9,
+      image: "https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
+      year: 2023,
+      genres: ["ACTION"],
+      fav: false,
     },
   ];
 
@@ -99,6 +163,7 @@ export default function Home() {
               title={movie.title}
               rating={movie.rating}
               image={movie.image}
+              genres={movie.genres}
               year={movie.year}
             />
           ))}
@@ -120,6 +185,7 @@ export default function Home() {
               rating={movie.rating}
               image={movie.image}
               year={movie.year}
+              genres={movie.genres}
             />
           ))}
         </div>
